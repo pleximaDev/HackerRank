@@ -26,7 +26,7 @@ using namespace std;
 
 class Box
 {
- public:
+public:
     // void Box(int, int, int) const;
     Box() {}
     Box(int length, int breadth, int height) : l(length), b(breadth), h(height) {}
@@ -37,8 +37,7 @@ class Box
     long long CalculateVolume();
     bool operator<(Box& B);
     friend ostream& operator<<(ostream& out, const Box& B);
-
- private:
+private:
     int l{0}, b{0}, h{0};
 };
 
@@ -76,11 +75,8 @@ bool Box::operator<(Box &B)
 
 ostream& operator<<(ostream& out, const Box& B)
 // ostream& Box::operator<<(Box& B)
-{
-    // return out << this -> l << " " <<  this -> b << " " <<  this -> h << endl;
-    
+{   
     return out << B.l << " " << B.b << " " << B.h;
-    // return cout << B.l << " " << B.b << " " << B.h << '\n';
 }
 
 
