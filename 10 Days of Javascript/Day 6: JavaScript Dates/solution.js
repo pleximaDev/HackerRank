@@ -25,7 +25,8 @@ function readLine() {
 function getDayName(dateString) {
     let dayName = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"), 
     monthName = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"),
-    date = dateString.split("/", 3), tempDate = String(monthName[Number(date[0]) - 1] + " " + date[1] + ", " + date[2]), 
+    date = dateString.split("/", 3), 
+    tempDate = String(monthName[Number(date[0]) - 1] + " " + date[1] + ", " + date[2]), 
     dateTemp = new Date(tempDate);
     // console.log(monthName[Number(date[1])], date[0], ", ", date[2]);
     return dayName[dateTemp.getDay()];
